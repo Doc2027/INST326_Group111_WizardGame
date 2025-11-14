@@ -1,5 +1,3 @@
-print("test)")
+print("test)") H
 
-print("Ricardo") # Nice to meet you ricardo
-
-# This is test ^
+# This is test ^3
