@@ -20,9 +20,6 @@ The game runs in the terminal and allows players to:
 - Compete against computer players  
 - Track scores across multiple rounds  
 
-All code was written from scratch using material learned in INST326.
-
----
 
 ## How to Run the Game
 
