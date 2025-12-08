@@ -5,51 +5,52 @@
 # Determining Trick Winners 
 def determine_trick_winner(trick, trump_suit, lead_suit):
     """ Selecting the winner of a trick in a wizard card game.
+
     Args:
         trick (list): A list of dictionaries representing the cards played in 
-            the trick.Each dictionary has keys: 'type' (str), 'suit' (str),
-                and 'rank' (int).
+            the trick. Each dictionary has keys: 'type' (str), 'suit' (str),
+            and 'rank' (int).
         trump_suit (str): The suit that is trump for the current round.
+        lead_suit (str): The suit that was led in the trick.
     """
 
-    # 1. check for wizard
-    i = 0
-    while i < len(trick):
-        if trick[i]["type"] == "wizard":
-            return i
-        i += 1
+    # Helper scoring function for the max() key
+    def card_strength(card):
+        # Wizards beat everything
+        if card["type"] == "wizard":
+            return 10_000
 
-    # 2. collect trump cards
-    trump_winner = None
-    i = 0
-    while i < len(trick):
-        card = trick[i]
-        if card["type"] == "normal" and card["suit"] == trump_suit:
-            if trump_winner is None or card["rank"] > trick[trump_winner]["rank"]:
-                trump_winner = i
-        i += 1
+        # Jesters lose to everything
+        if card["type"] == "jester":
+            return -1
 
-    if trump_winner is not None:
-        return trump_winner
+        # Conditional expression → technique
+        suit_score = (
+            200 if card["suit"] == trump_suit else
+            100 if card["suit"] == lead_suit else
+            0
+        )
 
-    # 3. collect lead suit cards
-    lead_winner = None
-    i = 0
-    while i < len(trick):
-        card = trick[i]
-        if card["type"] == "normal" and card["suit"] == lead_suit:
-            if lead_winner is None or card["rank"] > trick[lead_winner]["rank"]:
-                lead_winner = i
-        i += 1
+        return suit_score + card["rank"]
 
-    if lead_winner is not None:
-        return lead_winner
+    # Use max() with key → technique
+    winner_card = max(trick, key=card_strength)
 
-    # 4. no wizards, no trumps, no lead suit → first jester wins
-    i = 0
-    while i < len(trick):
-        if trick[i]["type"] == "jester":
-            return i
-        i += 1
+    return trick.index(winner_card)
 
-    return None
+def get_lead_suit(trick):
+    """
+    Determine the lead suit of the trick.
+
+    Args:
+        trick (list): list of card dictionaries representing a trick.
+
+    Returns:
+        str or None: the lead suit, or None if no normal cards appear.
+    """
+
+    # generator expression → technique
+    return next(
+        (card["suit"] for card in trick if card["type"] == "normal"),
+        None
+    )
