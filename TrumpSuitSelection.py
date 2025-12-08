@@ -5,14 +5,16 @@ def determine_trump(round_number, total_rounds, flipped_card, dealer_choice=None
     if round_number == total_rounds:
         return None
     
-    if flipped_card["type"] == "number":
-        return flipped_card["suit"]
+    card_type = flipped_card["type"]
+    
+    if flipped_card["type"] == "wizard":
+        return dealer_choice
     
     if flipped_card["type"] == "jester":
         return None
     
-    if flipped_card["type"] == "wizard":
-        return dealer_choice
+    if flipped_card["type"] == "normal":
+        return flipped_card["suit"]
     
     return None
 
