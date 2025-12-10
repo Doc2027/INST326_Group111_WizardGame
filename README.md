@@ -24,4 +24,4 @@ The game runs in the terminal and allows players to:
 ## How to Run the Game
 
  Run: 
-        python main_game.py
+        python Wizard_Game_Completed.py
