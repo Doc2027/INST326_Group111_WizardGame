@@ -25,3 +25,17 @@ The game runs in the terminal and allows players to:
 
  Run: 
         python Wizard_Game_Completed.py
+        
+The program will then ask you to:
+- Enter your name
+- Predict tricks
+- Choose cards to play each turn
+- Follow the suit rules during the trick takings
+
+## The purpose of each file in the Repository 
+- ComputerPlayer_Humanplayer_Class.py contains the Player class that is usedd for both human and computer players. In this section of the code, it includes methods for adding cards, choosing a card to play, printing the cards description and interacting with the games rules.
+- Computer_Player.py contains the computer_choose_card() function and in this it determines how the computer selects the cards. It implements a strategy based on different attributes of the game like trump, lead suit, Wizards, and Jesters.
+- Determining_Trick_Winners.py it contains determine_trick_winner() and carries the logic for assighning card strength and determines the winner of each truck.
+- Determining_Trick_winner.py has two functions, determine_trump() being the first one which decides the trump suit for each round, the next function announce_trump_to_players() prints out the trump information to all the players and includes logic for a dealer choice when a wizard is flipped.
+- Score_Predictions.py contains a score_predictions() function, which mandates legal card plays and ensures the players follow the suit when it is required.
+- Wizard_Game_Completed.py is the final version of the code and is ready to play!
