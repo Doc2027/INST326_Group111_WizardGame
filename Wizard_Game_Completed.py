@@ -198,20 +198,62 @@ def announce_trump_to_players(players, trump_suit):
 # Author: Ricardo
 # Purpose: Figure out score
 
-def score_predictions(predicted_list, actual_list):
+def calculate_score(predicted, actual, base_points=20):
+    """Calculate score for one player.
+    
+    Primary author: Ricardo Mejia
+    Technique Claimed: Optional Parameters
+    
+    Rules:
+        If predicted == actual: score = base_points + 10 * actual
+        else: score = -10 * abd(predicted - actual)
+    
+    Resturns:
+        int: The player's score for the round.
+
     """
-    Calculates score for each player based on predictions
+    if predicted == actual:
+        return base_points + 10 * actual
+    return -10 * abs(predicted - actual)
+
+def score_predictions(predicted_list, actual_list, player_names):
     """
+    Calculate scores for all players and identify correct predictions.
+    
+    Primary Author: Ricardo Mejia
+    Technique claimed: Set Operations
+    
+    Side effects:
+        prints the names of players who predicted correctly
+        
+    Returns:
+    list of tuples: (player_name, score)
+       
+    """
+    
+    if len(predicted_list) != len(actual_list) or len(predicted_list) != len(player_names):
+        raise ValueError("All input lists must be the same length")
+    
     scores = []
-    for i in range(len(predicted_list)):
+    correct_predictions = set()
+    
+    for i in range(len(player_names)):
+        name = player_names[i]
         predicted = predicted_list[i]
         actual = actual_list[i]
+        
+        score = calculate_score(predicted, actual)
+        scores.append((name,score))
+        
         if predicted == actual:
-            score = 20 + 10 * actual
-        else:
-            score = -10 * abs(predicted - actual)
-        scores.append(score)
-    return scores         
+            correct_predictions.add(name)
+            
+    if correct_predictions:
+        print("Player with correct prediction this round:", ",".join(sorted(correct_predictions)))
+    else:
+        print("Players with correct prediction this round: None")
+    
+    return scores       
 
 # Determine Trick Winner
 # Author: Daniel
@@ -363,12 +405,13 @@ if __name__ == "__main__":
             print(f"{winner_player.name} wins the trick!")
 
         # Score this round
-        round_scores = score_predictions(predictions, actual_tricks)
+        player_names = [p.name for p in players]
+        round_scores = score_predictions(predictions, actual_tricks, player_names)
         for i, player in enumerate(players):
-            player.score += round_scores[i]
+            player.score += round_scores[i][1]
             print(
                 f"{player.name} predicted {predictions[i]}, won {actual_tricks[i]}, "
-                f"score this round: {round_scores[i]}, total score: {player.score}"
+                f"score this round: {round_scores[i][1]}, total score: {player.score}"
             )
 
     # END OF GAME 
