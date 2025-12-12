@@ -48,7 +48,7 @@ The program will then ask you to:
 - Jesters always lose unless all cards are Jesters.
 - You must follow suit if able.
   Scoring:
- - Exact prediction → 20 + 10 × tricks won
+ - Exact prediction --> 20 + 10 × tricks won
  - Missed prediction --> –10 × difference
 
 ## The purpose of each file in the Repository 
