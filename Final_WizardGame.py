@@ -381,7 +381,7 @@ def announce_trump_to_players(players, trump_suit):
 # Score Predictions
 # Author: Ricardo
 # Purpose: Figure out score
-def calculate_score(predicted, actual, base_points=20):
+def calculate_score(predicted, actual, base_points=20): #Optional Parameter (base_points=20)
     """
     Calculate the score for a single player for one round.
 
@@ -433,7 +433,7 @@ def score_predictions(predicted_list, actual_list, player_names):
         raise ValueError("All input lists must be the same length")
 
     scores = []
-    correct_predictions = set()
+    correct_predictions = set()  #set creation
 
     for i in range(len(player_names)):
         name = player_names[i]
@@ -444,7 +444,7 @@ def score_predictions(predicted_list, actual_list, player_names):
         scores.append((name, score))
 
         if predicted == actual:
-            correct_predictions.add(name)
+            correct_predictions.add(name)  #set add
             
     if correct_predictions:
         print("Players who predicted correctly this round:", ", ".join(sorted(correct_predictions)))
@@ -798,4 +798,5 @@ if __name__ == "__main__":
     # End of game 
     print("\n*** Game Over Bye Bye :) ***")
     for player in players:
+
         print(f"{player.name} final score: {player.score}")
