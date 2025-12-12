@@ -34,17 +34,17 @@ The program will then ask you to:
 
 ## Game Rules 
 
-The Wizard deck contains 60 cards: 52 normal cards + 4 Wizards + 4 Jesters.
-Game is played over multiple rounds; players receive a number of cards equal to the round number.
-Trump determination:
+- The Wizard deck contains 60 cards: 52 normal cards + 4 Wizards + 4 Jesters.
+- Game is played over multiple rounds; players receive a number of cards equal to the round number.
+- Trump determination:
  - Normal card → that suit becomes trump
  - Jester → no trump
  - Wizard → dealer chooses trump
  - Final round → no trump
-Wizards always win a trick.
-Jesters always lose unless all cards are Jesters.
-You must follow suit if able.
-Scoring:
+- Wizards always win a trick.
+- Jesters always lose unless all cards are Jesters.
+- You must follow suit if able.
+- Scoring:
  - Exact prediction → 20 + 10 × tricks won
  - Missed prediction → –10 × difference
 
