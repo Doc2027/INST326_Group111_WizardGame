@@ -55,3 +55,10 @@ The program will then ask you to:
 - Determining_Trick_winner.py has two functions, determine_trump() being the first one which decides the trump suit for each round, the next function announce_trump_to_players() prints out the trump information to all the players and includes logic for a dealer choice when a wizard is flipped.
 - Score_Predictions.py contains a score_predictions() function, which mandates legal card plays and ensures the players follow the suit when it is required.
 - Wizard_Game_Completed.py is the final version of the code and is ready to play!
+
+## Algorithm Components 
+1. Trick Winner - Evaluates all the played cards where it assigns strength values and then selects a trick winner.
+2. Scoring - Compares predicted and actual tricks to update all scores from each round.
+3. Computer Player - Cards are choosen using the codes logic and the rules for which cards have priority.
+4. Move Checking - Ensures legal moves: follows suit if possible, and handles Wizards/Jesters correctly.
+5. Trump Selection - Determines trump each round which is based on flipped cards and the rules given for it.
