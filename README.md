@@ -64,14 +64,17 @@ The program will then ask you to:
 5. Trump Selection - Determines trump each round which is based on flipped cards and the rules given for it.
 
 ## Attribution Table
-| Method / Function           | Primary Author    | Techniques Demonstrated                             |
-| --------------------------- | ----------------- | --------------------------------------------------- |
-| `human_choose_card`         | **Sara Susa**     | Composition (Player + Card interaction)             |
-| `computer_choose_card`      | **Sara Susa**     | List comprehension                                  |
-| `determine_trick_winner`    | **Daniel Osiyi**  | Conditional expressions                             |
-| `card_strength`             | **Daniel Osiyi**  | Key function with max()                           |
-| `score_predictions`         | **Ricardo Mejia** | Optional parameters, set operations                 |
-| `determine_trump`           | **Ian Hashem**    | Sequence Unpacking                                 |
-| `announce_trump_to_players` | **Ian Hashem**    | f-strings containing expressions                    |
-| `CardChecker.__contains__`  | **Ryan Tran**     | Magic method (__contains__), generator expression |
+
+| Method / Function           | Primary Author | Techniques Demonstrated                             |
+| --------------------------- | -------------- | --------------------------------------------------- |
+| `human_choose_card`         | Sara Susa      | Composition (Player + Card interaction)             |
+| `computer_choose_card`      | Sara Susa      | List comprehension                                  |
+| `determine_trick_winner`    | Daniel Osiyi   | Conditional expressions                             |
+| `card_strength`             | Daniel Osiyi   | Key function with max()                          |
+| `calculate_score`           | Ricardo Mejia  | Optional parameters / keyword arguments             |
+| `score_predictions`         | Ricardo Mejia  | Set operations (set difference)                     |
+| `determine_trump`           | Ian Hashem     | Sequence unpacking                                  |
+| `announce_trump_to_players` | Ian Hashem     | f-strings containing expressions                    |
+| `CardChecker.__contains__`  | Ryan Tran      | Magic method (__contains__) generator expression |
+
 
