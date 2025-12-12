@@ -69,9 +69,9 @@ The program will then ask you to:
 | `human_choose_card`         | **Sara Susa**     | Composition (Player + Card interaction)             |
 | `computer_choose_card`      | **Sara Susa**     | List comprehension                                  |
 | `determine_trick_winner`    | **Daniel Osiyi**  | Conditional expressions                             |
-| `card_strength`             | **Daniel Osiyi**  | Key function with `max()`                           |
+| `card_strength`             | **Daniel Osiyi**  | Key function with max()                           |
 | `score_predictions`         | **Ricardo Mejia** | Optional parameters, set operations                 |
 | `determine_trump`           | **Ian Hashem**    | Sequence Unpacking                                 |
 | `announce_trump_to_players` | **Ian Hashem**    | f-strings containing expressions                    |
-| `CardChecker.__contains__`  | **Ryan Tran**     | Magic method (`__contains__`), generator expression |
+| `CardChecker.__contains__`  | **Ryan Tran**     | Magic method (__contains__), generator expression |
 
