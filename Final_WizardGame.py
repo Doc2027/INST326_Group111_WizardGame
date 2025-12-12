@@ -432,8 +432,8 @@ def score_predictions(predicted_list, actual_list, player_names):
     if len(predicted_list) != len(actual_list) or len(predicted_list) != len(player_names):
         raise ValueError("All input lists must be the same length")
 
-    scores = []
-    correct_predictions = set()  #set creation
+    players_set = set(player_names)
+    incorrect_predictions = players_set - correct_predictions
 
     for i in range(len(player_names)):
         name = player_names[i]
@@ -800,3 +800,4 @@ if __name__ == "__main__":
     for player in players:
 
         print(f"{player.name} final score: {player.score}")
+
