@@ -62,3 +62,17 @@ The program will then ask you to:
 3. Computer Player - Cards are choosen using the codes logic and the rules for which cards have priority.
 4. Move Checking - Ensures legal moves: follows suit if possible, and handles Wizards/Jesters correctly.
 5. Trump Selection - Determines trump each round which is based on flipped cards and the rules given for it.
+
+## Attribution Table
+
+| Method / Function                 | Primary Author | Techniques Demonstrated              |
+| --------------------------------- | -------------- | ------------------------------------ |
+| `human_choose_card`               | **Sara**       | Composition of Player + Card classes |
+| `computer_choose_card`            | **Sara**       | List comprehension                   |
+| `determine_trick_winner`          | **Daniel**     | Conditional expressions              |
+| `card_strength` (helper)          | **Daniel**     | Key function with `max()`            |
+| `score_predictions`               | **Ricardo**    | Optional parameters, set operations  |
+| `determine_trump`                 | **Ian**        | Optional parameters                  |
+| `announce_trump_to_players`       | **Ian**        | f-strings containing expressions     |
+|  | **Ryan**       | Magic methods, composition           |
+
