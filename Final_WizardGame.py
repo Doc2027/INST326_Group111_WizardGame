@@ -428,12 +428,11 @@ def score_predictions(predicted_list, actual_list, player_names):
     Returns:
         list[tuple]: A list of (player_name, score) for each player.
     """
-    
     if len(predicted_list) != len(actual_list) or len(predicted_list) != len(player_names):
-        raise ValueError("All input lists must be the same length")
+            raise ValueError("All input lists must be the same length")
 
-    players_set = set(player_names)
-    incorrect_predictions = players_set - correct_predictions
+    scores = [] # THIS MUST STAY IT WILL BREAK THE CODE IF REMOVED LEARNED THE HARD WAY!!! 
+    correct_predictions = set() 
 
     for i in range(len(player_names)):
         name = player_names[i]
@@ -443,17 +442,20 @@ def score_predictions(predicted_list, actual_list, player_names):
         score = calculate_score(predicted, actual)
         scores.append((name, score))
 
-        if predicted == actual:
-            correct_predictions.add(name)  #set add
-            
+    if predicted == actual:
+            correct_predictions.add(name)
+
+    players_set = set(player_names)
+    incorrect_predictions = players_set - correct_predictions # Added a proper set operation (-)
+
     if correct_predictions:
-        print("Players who predicted correctly this round:", ", ".join(sorted(correct_predictions)))
+        print("Players who predicted correctly this round:",
+              ", ".join(sorted(correct_predictions)))
     else:
         print("No players predicted correctly this round.")
-        
+
     return scores
-
-
+    
 # Determine Trick Winner
 # Author: Daniel
 # Purpose: Find who wins the trick
@@ -800,4 +802,5 @@ if __name__ == "__main__":
     for player in players:
 
         print(f"{player.name} final score: {player.score}")
+
 
