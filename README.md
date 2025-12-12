@@ -71,7 +71,7 @@ The program will then ask you to:
 | `determine_trick_winner`    | **Daniel Osiyi**  | Conditional expressions                             |
 | `card_strength`             | **Daniel Osiyi**  | Key function with `max()`                           |
 | `score_predictions`         | **Ricardo Mejia** | Optional parameters, set operations                 |
-| `determine_trump`           | **Ian Hashem**    | Optional parameters                                 |
+| `determine_trump`           | **Ian Hashem**    | Sequence Unpacking                                 |
 | `announce_trump_to_players` | **Ian Hashem**    | f-strings containing expressions                    |
 | `CardChecker.__contains__`  | **Ryan Tran**     | Magic method (`__contains__`), generator expression |
 
