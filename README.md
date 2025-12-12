@@ -24,8 +24,9 @@ The game runs in the terminal and allows players to:
 ## How to Run the Game
 
  Run: 
-        python Wizard_Game_Completed.py
-        
+     On Windows: python Wizard_Game_Completed.py
+     On Mac: python3 Wizard_Game_Completed.py
+     
 The program will then ask you to:
 - Enter your name
 - Predict tricks
