@@ -32,6 +32,22 @@ The program will then ask you to:
 - Choose cards to play each turn
 - Follow the suit rules during the trick takings
 
+## Game Rules 
+
+The Wizard deck contains 60 cards: 52 normal cards + 4 Wizards + 4 Jesters.
+Game is played over multiple rounds; players receive a number of cards equal to the round number.
+Trump determination:
+ - Normal card → that suit becomes trump
+ - Jester → no trump
+ - Wizard → dealer chooses trump
+ - Final round → no trump
+Wizards always win a trick.
+Jesters always lose unless all cards are Jesters.
+You must follow suit if able.
+Scoring:
+ - Exact prediction → 20 + 10 × tricks won
+ - Missed prediction → –10 × difference
+
 ## The purpose of each file in the Repository 
 - ComputerPlayer_Humanplayer_Class.py contains the Player class that is usedd for both human and computer players. In this section of the code, it includes methods for adding cards, choosing a card to play, printing the cards description and interacting with the games rules.
 - Computer_Player.py contains the computer_choose_card() function and in this it determines how the computer selects the cards. It implements a strategy based on different attributes of the game like trump, lead suit, Wizards, and Jesters.
