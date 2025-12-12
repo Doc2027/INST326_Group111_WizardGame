@@ -56,7 +56,7 @@ The program will then ask you to:
 - Computer_Player.py contains the computer_choose_card() function and in this it determines how the computer selects the cards. It implements a strategy based on different attributes of the game like trump, lead suit, Wizards, and Jesters.
 - Determining_Trick_Winners.py it contains determine_trick_winner() and carries the logic for assighning card strength and determines the winner of each truck.
 - Determining_Trick_winner.py has two functions, determine_trump() being the first one which decides the trump suit for each round, the next function announce_trump_to_players() prints out the trump information to all the players and includes logic for a dealer choice when a wizard is flipped.
-- Score_Predictions.py contains a score_predictions() function, which mandates legal card plays and ensures the players follow the suit when it is required.
+- Score_Predictions.py contains a calculate_score() and score_predictions(), which computes the score using predicted vs actual tricks and set operations to report correct predictors.
 - Wizard_Game_Completed.py is the final version of the code and is ready to play!
 
 ## Algorithm Components 
@@ -68,17 +68,19 @@ The program will then ask you to:
 
 ## Attribution Table
 
-| Method/function           | Primary author | Techniques demonstrated                             |
-| --------------------------- | -------------- | --------------------------------------------------- |
-| `human_choose_card`         | Sara Susa      | Composition (Player + Card interaction)             |
-| `computer_choose_card`      | Sara Susa      | List comprehension                                  |
-| `determine_trick_winner`    | Daniel Osiyi   | Conditional expressions                             |
-| `card_strength`             | Daniel Osiyi   | Key function with max()                          |
-| `calculate_score`           | Ricardo Mejia  | Optional parameters / keyword arguments             |
-| `score_predictions`         | Ricardo Mejia  | Set operations (set difference)                     |
-| `determine_trump`           | Ian Hashem     | Sequence unpacking                                  |
-| `announce_trump_to_players` | Ian Hashem     | f-strings containing expressions                    |
-| `CardChecker.__contains__`  | Ryan Tran      | Magic method (__contains__) generator expression |
+## Attribution Table
+
+| Method / Function | Primary Author | Techniques Demonstrated |
+|-------------------|---------------|--------------------------|
+| `human_choose_card` | Sara Susa | Composition (Player + Card interaction) |
+| `computer_choose_card` | Sara Susa | List comprehension |
+| `determine_trick_winner` | Daniel Osiyi | Conditional expressions |
+| `card_strength` | Daniel Osiyi | Key function with max() |
+| `calculate_score` | Ricardo Mejia | Optional parameters |
+| `score_predictions` | Ricardo Mejia | Set operations (set difference) |
+| `determine_trump` | Ian Hashem | Sequence unpacking |
+| `announce_trump_to_players` | Ian Hashem | f-strings containing expressions |
+| `CardChecker.__contains__` | Ryan Tran | Magic method ( __ contains __ ), generator expression |
 
 # Annotated Bibliography 
 1. Wizard Card Game Offical Rules
