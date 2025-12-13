@@ -55,8 +55,10 @@ The program will then ask you to:
 - ComputerPlayer_Humanplayer_Class.py contains the Player class that is usedd for both human and computer players. In this section of the code, it includes methods for adding cards, choosing a card to play, printing the cards description and interacting with the games rules.
 - Computer_Player.py contains the computer_choose_card() function and in this it determines how the computer selects the cards. It implements a strategy based on different attributes of the game like trump, lead suit, Wizards, and Jesters.
 - Determining_Trick_Winners.py it contains determine_trick_winner() and carries the logic for assighning card strength and determines the winner of each truck.
-- Determining_Trick_winner.py has two functions, determine_trump() being the first one which decides the trump suit for each round, the next function announce_trump_to_players() prints out the trump information to all the players and includes logic for a dealer choice when a wizard is flipped.
+- TrumpSuitSelection.py has two functions, determine_trump() being the first one which decides the trump suit for each round, the next function announce_trump_to_players() prints out the trump information to all the players and includes logic for a dealer choice when a wizard is flipped.
 - Score_Predictions.py contains a calculate_score() and score_predictions(), which computes the score using predicted vs actual tricks and set operations to report correct predictors.
+- MoveChecking.py is the original move checking logic that enforces the basic Wizard rules. It handles rules such as following a suit when possible as well as handling Wizards and Jesters during a trick.
+- MoveCheckingUpdate.py is the updated version of the original movechecking.py. This version of it is the correct logic with refinements and particular handling.
 - Wizard_Game_Completed.py is the final version of the code and is ready to play!
 
 ## Algorithm Components 
