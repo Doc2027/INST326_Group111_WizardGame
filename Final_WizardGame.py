@@ -442,7 +442,7 @@ def score_predictions(predicted_list, actual_list, player_names):
         score = calculate_score(predicted, actual)
         scores.append((name, score))
 
-    if predicted == actual:
+        if predicted == actual:
             correct_predictions.add(name)
 
     players_set = set(player_names)
@@ -802,5 +802,6 @@ if __name__ == "__main__":
     for player in players:
 
         print(f"{player.name} final score: {player.score}")
+
 
 
