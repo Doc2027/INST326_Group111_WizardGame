@@ -85,7 +85,5 @@ The program will then ask you to:
 # Annotated Bibliography 
 1. Wizard Card Game Offical Rules - U.S. Games Systems, Inc.(n.d.). Wizard FAQ https://www.usgamesinc.com/Wizard-FAQ.html
    - We were all familar with the card game wizard prior to begining to code the game, but we actually had to sit down hop on a call and learn this all together. We used the rules as background information to understand the game, including trump determination, the mechanics of trick taking, and the role of Wizards and Jesters and how scoring works with those. It provided us with great knowledge of the game and how we wanted to implement the logic into our code.
-2. INST326 Course Materials (In class notes, Module Videos)
-   - We have all heard or messed with these techniques at some point, so going back through the lecture video topics was a huge help when it came to conditionals, loops, functions, classes setc. These concepts were used all throughout the code and can be found in essentially every part of the code. Being able to refresh our memory was a huge help. 
-3. Internet Searches
+2. Internet Searches
    - There was points when it came to implementing a technique that did stub us, espeically when we would try and implement something and python went from happy to angry in seconds. Just doing these quick searches helped us reinforce these concepts and how to implement it. We had several trial and errors with our game.
