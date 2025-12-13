@@ -68,8 +68,6 @@ The program will then ask you to:
 
 ## Attribution Table
 
-## Attribution Table
-
 | Method / Function | Primary Author | Techniques Demonstrated |
 |-------------------|---------------|--------------------------|
 | `human_choose_card` | Sara Susa | Composition (Player + Card interaction) |
